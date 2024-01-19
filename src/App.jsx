@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 
 import './App.css'
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -12,11 +13,13 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-  
       </div>
-      
+      <Link to="profile/Spinach">To the Spinach Profile Page</Link>
+      <br/>
+      <Link to="profile/popeye">To the Popeye Profile Page</Link>
+      <br/>
+
     </>
   )
 }
 
-export default App
